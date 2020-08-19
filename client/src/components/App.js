@@ -29,7 +29,7 @@ export const App = () => {
                     <Route path="/login" component={Login} />
                     <Route path="/register" component={Register} />
                     <PrivateRoute path="/dashboard" component={UserDashboard} />
-                    <PrivateRoute path="/pageone" component={StudyUp} />
+                    <PrivateRoute path="/studyup" component={StudyUp} />
                     <Route component={NoMatch} />
                 </Switch>
             </Router>
