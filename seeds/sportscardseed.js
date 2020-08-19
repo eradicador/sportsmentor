@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Sportscard = require("../models/sportscardModel");
+const Sportscard = require("../models/sportscardModel.js");
 
 mongoose.connect(
     process.env.MONGODB_URI ||
@@ -10,6 +10,62 @@ mongoose.connect(
       {
           sportsname: "Baseball",
           spImgUrl: "",
-          sportsLink1: "<a href='' "
-      }
-  ]
+          sportsLink1: "",
+          sportsLink2: "",
+          sportsLink3: "",
+          sportsLink4: ""
+      },
+      {
+        sportsname: "Basketball",
+        spImgUrl: "",
+        sportsLink1: "",
+        sportsLink2: "",
+        sportsLink3: "",
+        sportsLink4: ""
+    },
+    {
+        sportsname: "Football",
+        spImgUrl: "",
+        sportsLink1: "",
+        sportsLink2: "",
+        sportsLink3: "",
+        sportsLink4: ""
+    },
+    {
+        sportsname: "Hockey",
+        spImgUrl: "",
+        sportsLink1: "",
+        sportsLink2: "",
+        sportsLink3: "",
+        sportsLink4: ""
+    },
+    {
+        sportsname: "Soccer",
+        spImgUrl: "",
+        sportsLink1: "",
+        sportsLink2: "",
+        sportsLink3: "",
+        sportsLink4: ""
+    }, 
+    {
+        sportsname: "Volleyball",
+        spImgUrl: "",
+        sportsLink1: "",
+        sportsLink2: "",
+        sportsLink3: "",
+        sportsLink4: ""
+    },
+
+  ];
+
+  Sportscard
+  .remove({})
+  .then(() => Sportscard.collection.insertMany(sportscardSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
