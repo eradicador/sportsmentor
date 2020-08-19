@@ -1,14 +1,16 @@
 import React from "react";
 import "./style.css"
 
-function Card() {
+function Card(props) {
     return (
-        <div className="card" style={{}}>
-        <img src="..." className="card-img-top" alt="..." />
+        <div className="card" style={{width: "30%"}}>
+        <img src={props.spImgUrl} className="card-img-top" alt="..." />
         <div className="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" className="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">{props.sportsname}</h5>
+          <a href={props.sportsLink1} class="card-link">Card link</a>
+          <a href={props.sportsLink1} class="card-link">Card link</a>
+          <a href={props.sportsLink1} class="card-link">Card link</a>
+          <a href={props.sportsLink1} class="card-link">Card link</a>
         </div>
       </div>
     )

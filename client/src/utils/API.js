@@ -10,6 +10,9 @@ export default {
     },
     loadUser(headers) {
         return axios.get("/auth/user", headers)
+    },
+    getSportscard: function () {
+        return axios.get("/api/sportscard");
     }
 
 }
