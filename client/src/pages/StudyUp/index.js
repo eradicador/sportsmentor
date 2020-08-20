@@ -22,6 +22,9 @@ export const StudyUp = () => {
         })
             .catch(err => console.log(err))
     }
+    function handleSave(data){
+        console.log("data", data)
+    }
     
     return (
         <>
@@ -35,12 +38,15 @@ export const StudyUp = () => {
                 <Col size="md-6">
                     {sportscard.map(SCItem => {
                         return <Card
-                            sportsname={SCItem.name}
+                        key={SCItem._id}
+                        id={SCItem._id}
+                            sportsname={SCItem.sportsname}
                             spImgUrl={SCItem.spImgUrl}
                             sportsLink1={SCItem.sportsLink1}
                             sportsLink2={SCItem.sportsLink2}
                             sportsLink3={SCItem.sportsLink3}
-                            sportsLink4={SCItem.sportsLink4} />
+                            sportsLink4={SCItem.sportsLink4}
+                            handleSave={handleSave} />
                     })}
                  
             </Col>
