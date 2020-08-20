@@ -22,8 +22,17 @@ export const StudyUp = () => {
         })
             .catch(err => console.log(err))
     }
-    function handleSave(data){
-        console.log("data", data)
+    // save out the card for specific user 
+    function handleSave(cardId){
+        console.log("data", cardId)
+        // get userId, need to do still
+        
+        API.saveSportscard(userId, cardId).then(result => {
+            console.log(result)
+            setSportscard(result.data)
+        })
+            .catch(err => console.log(err))
+
     }
     
     return (
