@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css"
 
+
 function Card(props) {
     return (
         <div className="card" style={{width: "30%"}}>
@@ -11,6 +12,7 @@ function Card(props) {
           <a href={props.sportsLink1} class="card-link">Card link</a>
           <a href={props.sportsLink1} class="card-link">Card link</a>
           <a href={props.sportsLink1} class="card-link">Card link</a>
+          <button onClick={()=>props.handleSave(props.id)} className="btn danger">SAVE</button>
         </div>
       </div>
     )
