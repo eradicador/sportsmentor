@@ -17,7 +17,7 @@ mongoose.connect(
       },
       {
         sportsname: "Basketball",
-        spImgUrl: "",
+        spImgUrl: "https://www.michaeljordansworld.com/pictures/images/michael_jordan_1997_03.jpg",
         sportsLink1: "",
         sportsLink2: "",
         sportsLink3: "",

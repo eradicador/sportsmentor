@@ -18,7 +18,7 @@ const UserSchema = new Schema({
         type: String,
         require: true
     },
-    cardId: [
+    cards: [
         {
           // Store ObjectIds in the array
           type: Schema.Types.ObjectId,
