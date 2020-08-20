@@ -7,11 +7,11 @@ function Card(props) {
         <div className="card" style={{width: "30%"}}>
         <img src={props.spImgUrl} className="card-img-top" alt="..." />
         <div className="card-body">
-          <h5 class="card-title">{props.sportsname}</h5>
-          <a href={props.sportsLink1} class="card-link">Card link</a>
-          <a href={props.sportsLink1} class="card-link">Card link</a>
-          <a href={props.sportsLink1} class="card-link">Card link</a>
-          <a href={props.sportsLink1} class="card-link">Card link</a>
+          <h5 className="card-title">{props.sportsname}</h5>
+          <a href={props.sportsLink1} className="card-link">Card link</a>
+          <a href={props.sportsLink1} className="card-link">Card link</a>
+          <a href={props.sportsLink1} className="card-link">Card link</a>
+          <a href={props.sportsLink1} className="card-link">Card link</a>
           <button onClick={()=>props.handleSave(props.id)} className="btn danger">SAVE</button>
         </div>
       </div>

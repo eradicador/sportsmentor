@@ -21,9 +21,9 @@ const UserSchema = new Schema({
     cardId: [
         {
           // Store ObjectIds in the array
-          Sportscard: Schema.Types.ObjectId,
+          type: Schema.Types.ObjectId,
           // The ObjectIds will refer to the ids in the Note model
-          ref: "Note"
+          ref: "Sportscard"
         }
       ]
       
