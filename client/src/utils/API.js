@@ -16,6 +16,9 @@ export default {
     },
     saveSportscard: function (email, cardId) {
         return axios.post("/api/sportscard/" + email + "/" + cardId);
+    },
+    getUsercard: function (id) {
+        return axios.get("api/dashboard/card/" + id)
     }
     
 }

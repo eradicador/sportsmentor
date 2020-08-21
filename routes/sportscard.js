@@ -10,6 +10,9 @@ router.route("/sportscard")
 router.route("/sportscard/:email/:cardId")
   .post(sportscardController.create)
   
+
+router.route("/dashboard/cards/:id")
+.get(sportscardController.getProfile)
   
 
 // Matches with "/api/merch/:id"

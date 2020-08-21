@@ -1,5 +1,6 @@
 const Sportscard = require("../models/sportscardModel");
-const User = require("../models/user")
+const User = require("../models/user");
+const { findById } = require("../models/user");
 
 
 // Defining methods for the merchController
@@ -25,8 +26,16 @@ module.exports = {
 
   },
 
-  getProfile: function () {
-    // to do: 
+  getProfile: function (req, res) {
+    // to do:
+    console.log(req.params.id);
+    console.log(req.body);
+
+    User
+    .findById(req.params.id)
+    .populate("cards")
+    .then (dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err))
   }
   
   
