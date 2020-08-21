@@ -1,6 +1,7 @@
 const Sportscard = require("../models/sportscardModel");
 const User = require("../models/user")
 
+
 // Defining methods for the merchController
 module.exports = {
   findAll: function(req, res) {
@@ -13,13 +14,19 @@ module.exports = {
   create: function(req, res) {
     // get request parameters (ids)
     let cardId = req.params.cardId;
-    let userId =req.params.userId;
+    let email =req.params.email;
+    console.log(cardId, email)
+
 // updating the user's card array with the card's id
     User
-      .findOneAndUpdate({_id: userId}, {$push:{cards: cardId}},{new: true})
+      .findOneAndUpdate({email: email}, {$push:{cards: cardId}},{new: true})
       .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-    
+      .catch(err => res.status(422).json(err))
+
+  },
+
+  getProfile: function () {
+    // to do: 
   }
   
   
