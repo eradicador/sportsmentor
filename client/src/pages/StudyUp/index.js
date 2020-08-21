@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import API from "../../utils/API";
 import { Header, Message } from "semantic-ui-react";
 import { Col, Row, Container } from "../../components/Grid";
@@ -6,6 +7,8 @@ import Card from "../../components/SportCard"
 
 
 export const StudyUp = () => {
+    
+    const { currentUser, isAuthenticated } = useSelector(state => state.auth)
     // setting the components initial state
     const [sportscard, setSportscard] = useState([])
 
@@ -24,12 +27,15 @@ export const StudyUp = () => {
     }
     // save out the card for specific user 
     function handleSave(cardId){
-        console.log("data", cardId)
-        // get userId, need to do still
         
-        API.saveSportscard(userId, cardId).then(result => {
+        console.log("cardId", cardId)
+        console.log("currentUser.email", currentUser.email)
+        // get userId, need to do still
+        let email = currentUser.email;
+
+        API.saveSportscard(email, cardId).then(result => {
             console.log(result)
-            setSportscard(result.data)
+            // setSportscard(result.data)
         })
             .catch(err => console.log(err))
 
