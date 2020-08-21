@@ -5,7 +5,7 @@ import "./style.css"
 
 function Card(props) {
     return (
-        <div className="card" style={{width: "30%"}}>
+        <div className="card">
         <img src={props.spImgUrl} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{props.sportsname}</h5>

@@ -2,12 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import API from "../../utils/API";
 import { Header, Message } from "semantic-ui-react";
-import { Col, Row, Container } from "../../components/Grid";
 import Card from "../../components/SportCard"
-
+import "./style.css"
 
 export const StudyUp = () => {
-    
+
     const { currentUser, isAuthenticated } = useSelector(state => state.auth)
     // setting the components initial state
     const [sportscard, setSportscard] = useState([])
@@ -26,8 +25,8 @@ export const StudyUp = () => {
             .catch(err => console.log(err))
     }
     // save out the card for specific user 
-    function handleSave(cardId){
-        
+    function handleSave(cardId) {
+
         console.log("cardId", cardId)
         console.log("currentUser.email", currentUser.email)
         // get userId, need to do still
@@ -40,34 +39,36 @@ export const StudyUp = () => {
             .catch(err => console.log(err))
 
     }
-    
+
     return (
         <>
             <Message className="message-container" size="huge" secondary="true">
                 <Header size="huge"> Get to Learning! </Header>
                 <p>This is a Protected Route</p>
-               
+
             </Message>
-            <Container fluid>
-            <Row>
-                <Col size="md-6">
-                    {sportscard.map(SCItem => {
-                        return <Card
-                        key={SCItem._id}
-                        id={SCItem._id}
-                            sportsname={SCItem.sportsname}
-                            spImgUrl={SCItem.spImgUrl}
-                            sportsLink1={SCItem.sportsLink1}
-                            sportsLink2={SCItem.sportsLink2}
-                            sportsLink3={SCItem.sportsLink3}
-                            sportsLink4={SCItem.sportsLink4}
-                            handleSave={handleSave} />
-                    })}
-                 
-            </Col>
-        </Row>
-    </Container>
+            <div className="container">
+                <div className="row"> 
+               
+                        {sportscard.map(SCItem => {
+                            return (
+                                <div className="col-md-4 col-sm-6">
+                             <Card
+                                key={SCItem._id}
+                                id={SCItem._id}
+                                sportsname={SCItem.sportsname}
+                                spImgUrl={SCItem.spImgUrl}
+                                sportsLink1={SCItem.sportsLink1}
+                                sportsLink2={SCItem.sportsLink2}
+                                sportsLink3={SCItem.sportsLink3}
+                                sportsLink4={SCItem.sportsLink4}
+                                handleSave={handleSave} />
+                                 </div>
+                        )})}
+                </div>
+            </div>
         </>
+
     )
 }
 
