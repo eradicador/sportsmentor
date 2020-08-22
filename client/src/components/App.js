@@ -11,6 +11,12 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import NoMatch from "../pages/NoMatch";
+import Baseball from "../pages/Baseball"
+import Basketball from "../pages/Basketball"
+import Football from "../pages/Football"
+import Hockey from "../pages/Hockey"
+import Soccer from "../pages/Soccer"
+import Volleyball from "../pages/Volleyball"
 
 export const App = () => {
 
@@ -30,6 +36,12 @@ export const App = () => {
                     <Route path="/register" component={Register} />
                     <PrivateRoute path="/dashboard" component={UserDashboard} />
                     <PrivateRoute path="/studyup" component={StudyUp} />
+                    <PrivateRoute path="/baseball" component={Baseball} />
+                    <PrivateRoute path="/basketball" component={Basketball} />
+                    <PrivateRoute path="/football" component={Football} />
+                    <PrivateRoute path="/hockey" component={Hockey} />
+                    <PrivateRoute path="/soccer" component={Soccer} />
+                    <PrivateRoute path="/volleyball" component={Volleyball} />
                     <Route component={NoMatch} />
                 </Switch>
             </Router>

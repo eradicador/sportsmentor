@@ -10,50 +10,32 @@ mongoose.connect(
       {
           sportsname: "Baseball",
           spImgUrl: "",
-          sportsLink1: "",
-          sportsLink2: "",
-          sportsLink3: "",
-          sportsLink4: ""
+          sportspage: "/baseball"
       },
       {
         sportsname: "Basketball",
         spImgUrl: "https://www.michaeljordansworld.com/pictures/images/michael_jordan_1997_03.jpg",
-        sportsLink1: "",
-        sportsLink2: "",
-        sportsLink3: "",
-        sportsLink4: ""
+        sportspage: "/basketball"
     },
     {
         sportsname: "Football",
         spImgUrl: "",
-        sportsLink1: "",
-        sportsLink2: "",
-        sportsLink3: "",
-        sportsLink4: ""
+        sportspage: "/football"
     },
     {
         sportsname: "Hockey",
         spImgUrl: "",
-        sportsLink1: "",
-        sportsLink2: "",
-        sportsLink3: "",
-        sportsLink4: ""
+        sportspage: "/hockey"
     },
     {
         sportsname: "Soccer",
         spImgUrl: "",
-        sportsLink1: "",
-        sportsLink2: "",
-        sportsLink3: "",
-        sportsLink4: ""
+        sportspage: "/soccer"
     }, 
     {
         sportsname: "Volleyball",
         spImgUrl: "",
-        sportsLink1: "",
-        sportsLink2: "",
-        sportsLink3: "",
-        sportsLink4: ""
+        sportspage: "/volleyball"
     },
 
   ];
