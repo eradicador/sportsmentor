@@ -13,8 +13,8 @@ function Card(props) {
         <img src={props.spImgUrl} className="card-img-top" alt="..." />
         </Link>
         <div className="card-body">
-          <h5 className="card-title">{props.sportsname}</h5>
-          <button onClick={()=>props.handleSave(props.id)} className="btn danger">SAVE</button>
+          <h2 className="card-title">{props.sportsname}</h2>
+          <button onClick={()=>props.handleSave(props.id)} className="btn btn-danger">SAVE</button>
         </div>
       </div>
       
