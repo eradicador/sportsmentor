@@ -40,6 +40,8 @@ export const StudyUp = () => {
 
     }
 
+   
+
     return (
         <>
             <Message className="message-container" size="huge" secondary="true">
@@ -58,10 +60,7 @@ export const StudyUp = () => {
                                 id={SCItem._id}
                                 sportsname={SCItem.sportsname}
                                 spImgUrl={SCItem.spImgUrl}
-                                sportsLink1={SCItem.sportsLink1}
-                                sportsLink2={SCItem.sportsLink2}
-                                sportsLink3={SCItem.sportsLink3}
-                                sportsLink4={SCItem.sportsLink4}
+                                sportspage={SCItem.sportspage}
                                 handleSave={handleSave} />
                                  </div>
                         )})}

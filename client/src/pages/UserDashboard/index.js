@@ -9,24 +9,31 @@ export const UserDashboard = () => {
 
     const [sportscard, setSportscard] = useState([])
 
-    useEffect(() => {
-        loadSportscard()
-    }, [])
+    // useEffect(() => {
+    //     loadSportscard()
+    // }, [])
 
-    // load all the merch and set ot tp merch
-    function loadSportscard() {
-        API.getUsercard().then(result => {
-            console.log(result)
-            setSportscard(result.data)
-        })
-            .catch(err => console.log(err))
-    }
+    // // load all the merch and set ot tp merch
+    // function loadSportscard() {
+    //     API.getUsercard().then(result => {
+    //         console.log("result.data", result.data)
+            
+    //         setSportscard(result.data)
+    //     })
+    //         .catch(err => console.log(err))
+    // }
     // access to the currentUser property from the auth reducer state
     const user = useSelector(state => state.auth.currentUser);
+    console.log("user", user._id)
     useEffect(() => {
-        axios.get("/api/dashboard/cards/" + user._id)
-        .then(data => {
-            console.log("this is the user", data)
+        const url = "/api/dashboard/cards/" + user._id
+        console.log("url", url)
+       
+        axios.get(url)
+        .then(result => {
+            console.log("this is the user", result)
+            
+            setSportscard(result.data.cards)
         })
 
 
@@ -50,10 +57,7 @@ export const UserDashboard = () => {
                                 id={SCItem._id}
                                 sportsname={SCItem.sportsname}
                                 spImgUrl={SCItem.spImgUrl}
-                                sportsLink1={SCItem.sportsLink1}
-                                sportsLink2={SCItem.sportsLink2}
-                                sportsLink3={SCItem.sportsLink3}
-                                sportsLink4={SCItem.sportsLink4}
+                                sportspage={SCItem.sportspage}
                                 />
                                  </div>
                         )})}
