@@ -27,3 +27,37 @@ Card {
 Card:hover {
    animation: bounce 1s;
 }
+
+.body{
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px;
+}
+
+/* .huge.message{
+  background: none;
+  border: none;
+} */
+
+h1{
+  font-size: 70px;
+  color: rgb(180, 22, 22);
+  text-shadow: 1.5px 1.5px #faf8f8;
+}
+
+.col{
+  
+  margin-top: 20px;
+  margin-bottom: 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+

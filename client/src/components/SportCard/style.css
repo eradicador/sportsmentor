@@ -20,9 +20,8 @@
       border: 3px groove #000000;
       color: #ffffff;
       background: rgb(7, 7, 7);
-  }
-
- 
+      box-shadow: rgba(248, 246, 246, 0.55) 2px 8px 20px 2px;
+}
 
 .card {
     height: 100%;
@@ -33,3 +32,15 @@
     border: 3px solid #000000;
     box-shadow: rgba(0, 0, 0, 0.55) 2px 8px 20px 2px;
 }
+
+h2{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px ;
+}
+
+/* img{
+  width: 416px;
+  height: 416px;
+} */
