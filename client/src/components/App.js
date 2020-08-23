@@ -17,7 +17,7 @@ import Football from "../pages/Football"
 import Hockey from "../pages/Hockey"
 import Soccer from "../pages/Soccer"
 import Volleyball from "../pages/Volleyball"
-import Footer from "./Footer";
+
 
 export const App = () => {
 
@@ -45,7 +45,6 @@ export const App = () => {
                     <PrivateRoute path="/volleyball" component={Volleyball} />
                     <Route component={NoMatch} />
                 </Switch>
-                <Footer />
             </Router>
         </>
     )

@@ -29,7 +29,7 @@ mongoose.connect(
     },
     {
         sportsname: "Soccer",
-        spImgUrl: "https://th.bing.com/th/id/OIP.KAOV9Mq_8w9lrfi-NYZBbwAAAA?w=168&h=180&c=7&o=5&dpr=1.25&pid=1.7",
+        spImgUrl: "https://yt3.ggpht.com/a/AATXAJwXr0Q63VSwkFigPbG3ifqcSovnH4vivX2yow=s900-c-k-c0xffffffff-no-rj-mo",
         sportspage: "/soccer"
     }, 
     {

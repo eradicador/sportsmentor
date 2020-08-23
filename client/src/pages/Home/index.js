@@ -2,6 +2,7 @@ import React from 'react'
 import { Header, Message, Button, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import background from "../../images/homebg.jpg";
 
 export const Home = () => {
     // access to the isAuthenticated property from the auth reducer state
@@ -21,7 +22,7 @@ export const Home = () => {
     }
 
     return (
-        <div>
+        <div className="homebg" style={{ backgroundImage: `url(${background})` }}>>
             <Message className="message-container" size="huge" secondary="true">
                 <Header size="huge"> Home</Header>
                 <p style={{ marginBottom: "5px" }}>This is a Boiler Plate MERN application with authentication using JSON Web Tokens.</p>
