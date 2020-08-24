@@ -2,8 +2,13 @@
 .ui.menu:first-child {
     margin-top: 0;
     margin-bottom: 0;
-    background: none;
-    background-color: transparent;
+    box-shadow: rgba(248, 246, 246, 0.55) 2px 8px 20px 2px;
+    position: fixed;
+    top: 0;
+    z-index: +2;
+    /* background-color: transparent; */
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: medium;
 }
 
 /* Jumbotron/Message styling */
@@ -25,4 +30,9 @@
     margin-top: 0;
     margin-bottom: 1em;
     text-align: center;
+}
+
+.huge.message{
+  background: none;
+  border: none;
 }
