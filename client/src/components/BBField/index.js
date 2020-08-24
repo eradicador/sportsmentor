@@ -1,16 +1,21 @@
 import React from 'react';
-// import youtubeAPI from '../utils/youtubeAPI';
-// import VidGroup from './VidGroup';
-// import VidDetails from './VidDetails';
-// import { Container } from 'semantic-ui-react';
+import youtubeAPI from '../../utils/youtubeAPI';
+import VidGroup from '../VidGroup';
+import VidDetails from '../VidDetails';
+import { Container, SearchResults } from 'semantic-ui-react';
 
 class BBField extends React.Component {
-    // state = {
-    //     videos: [youtubeAPI.get('/search/learning-to-field-a-baseball')],
-    //     selectedVideo: null
-    // }
+    state = {
+        videos: [],
+        selectedVideo: null
+    }
 
-
+    componentDidMount() {
+        youtubeAPI.getVideos().then(result => {
+            console.log(result);
+            this.setState({videos:result.data.items, selectedVideo:result.data.items[0]})
+        }).catch(error => console.log(error))
+    }
     render() {
         return (
             <>
@@ -42,7 +47,7 @@ class BBField extends React.Component {
                         </div>
                     </div>
                 </div>
-                {/* <div className='ui container' style={{ marginTop: '1em' }}>
+                <div className='ui container' style={{ marginTop: '1em' }}>
 
                     <div className='ui grid'>
                         <div className="ui row">
@@ -54,7 +59,7 @@ class BBField extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
 
             </>
         )

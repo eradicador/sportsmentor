@@ -1,9 +1,17 @@
 import React from "react";
 
 const VideoDetail = ({ video }) => {
-  
-  const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
-  console.log(typeof video);
+  let videoSrc = ""
+  if (!video) {
+    return(
+      <div>No Videos Found</div>
+    )
+  }
+  if(video && video.id) {
+    videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
+    console.log(typeof video);
+  }
+ 
   
   return (
     <div>

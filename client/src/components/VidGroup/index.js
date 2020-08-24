@@ -1,9 +1,9 @@
 import React from 'react';
-import VidItem from './VidItem';
+import VidItem from '../VidItem';
 
 const VidGroup = ({videos , handleVideoSelect}) => {
     const renderedVideos =  videos.map((video) => {
-        return <VidItem key={video.id.videoId} video={video} handleVideoSelect={handleVideoSelect} />
+        return <VidItem key={video.id} video={video} handleVideoSelect={handleVideoSelect} />
         // console.log(video.id);
     });
 
