@@ -12,12 +12,13 @@ export default {
             }
         })
     },
-    searchVideo: function() {
-        return axios.get('https://www.googleapis.com/youtube/v3/videos', {
+    searchVideoBBField: function() {
+        return axios.get('https://www.googleapis.com/youtube/v3/search', {
             params: {
                 part: 'snippet',
+                q: "learn to field a baseball",
                 chart: 'mostPopular',
-                maxResults: 5,
+                maxResults: 3,
                 key: KEY
             }
         })

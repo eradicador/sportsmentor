@@ -1,6 +1,7 @@
 .baseball{    
-    height: 100vh;
-    background-size: 100% 100%;
+   
+    background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position:  center;
     height: 100%;
@@ -9,13 +10,15 @@
     justify-content: flex-start;
     align-items: center;
     color:white;
-    font-size: large;
     padding: 40px;
-    position: absolute;
     width: 100%;
 }
 
 .container {
     text-align: center;
     justify-content: center;
+}
+
+#bbfieldhistory {
+    background-color: black;
 }
