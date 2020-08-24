@@ -11,7 +11,7 @@ class BBHit extends React.Component {
     }
 
     componentDidMount() {
-        youtubeAPI.searchVideoBBHit().then(result => {
+        youtubeAPI.searchVideo("how to hit a baseball").then(result => {
             console.log(result);
             this.setState({ videos: result.data.items, selectedVideo: result.data.items[0] })
         }).catch(error => console.log(error))

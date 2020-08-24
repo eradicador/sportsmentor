@@ -48,8 +48,8 @@ Card:hover {
 
 h1{
   font-size: 70px;
-  color: rgb(180, 22, 22);
-  text-shadow: 1.5px 1.5px #faf8f8;
+  color: rgb(252, 252, 252);
+  text-shadow: 3.5px 3.5px #b80909;
 }
 
 .col{
@@ -60,4 +60,15 @@ h1{
   text-align: center;
 }
 
+.library-header {
+  position: relative;
+}
 
+.toast-message {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: +2;
+  color: white;
+  background-color: black;
+}

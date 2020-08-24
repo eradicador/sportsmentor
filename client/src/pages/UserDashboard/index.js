@@ -55,6 +55,7 @@ export const UserDashboard = () => {
                              <Card
                                 key={SCItem._id}
                                 id={SCItem._id}
+                                isStudyUp = {false}
                                 sportsname={SCItem.sportsname}
                                 spImgUrl={SCItem.spImgUrl}
                                 sportspage={SCItem.sportspage}

@@ -14,7 +14,9 @@
       transform: translateY(-10px);
     }
   }
-
+  .green {
+    background: green;
+}
   .card:hover {
       animation: bounce 1s;
       border: 3px groove #000000;
