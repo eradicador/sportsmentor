@@ -11,7 +11,7 @@ class BBField extends React.Component {
     }
 
     componentDidMount() {
-        youtubeAPI.getVideos().then(result => {
+        youtubeAPI.searchVideoBBField().then(result => {
             console.log(result);
             this.setState({videos:result.data.items, selectedVideo:result.data.items[0]})
         }).catch(error => console.log(error))
