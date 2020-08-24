@@ -19,6 +19,18 @@
     justify-content: center;
 }
 
-#bbfieldhistory {
+#para {
     background-color: black;
+    padding: 15px;
+    border-style: groove;
+    border-radius: 2%;
+    box-shadow: rgba(248, 246, 246, 0.55) 2px 8px 20px 2px;
+    opacity: 70%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+ytube {
+    box-shadow: rgba(0, 0, 0, 0.55) 2px 8px 20px 2px;
 }
