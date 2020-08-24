@@ -8,7 +8,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    color:white;
+    color:red;
+    font-size: large;
     padding: 40px;
     position: absolute;
     width: 100%;

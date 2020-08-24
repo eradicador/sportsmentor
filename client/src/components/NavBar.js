@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Logout from "./Logout";
+import background from "../images/navbarbg.png"
 
 export const NavBar = () => {
 
@@ -12,15 +13,15 @@ export const NavBar = () => {
         if (isAuthenticated) {
             return (
                 <>
-                    <Link to="/dashboard" className="item text-body">{currentUser.email}</Link>
+                    <Link to="/dashboard" className="item text-primary">{currentUser.email}</Link>
                     <Logout />
                 </>
             )
         } else {
             return (
                 <>
-                    <Link to="/login" className="item text-body">Login</Link>
-                    <Link to="/register" className="item text-body">Register</Link>
+                    <Link to="/login" className="item text-primary">Login</Link>
+                    <Link to="/register" className="item text-primary">Register</Link>
                 </>
             )
         }
@@ -28,9 +29,9 @@ export const NavBar = () => {
     }
 
     return (
-        <div className="ui inverted menu">
-            <Link to="/" className="item text-body">Home</Link>
-            {isAuthenticated ? <Link to="/studyup" className="item text-body">Study Up</Link> : ""}
+        <div className="ui inverted menu" style={{ backgroundImage: `url(${background})` }}>
+            <Link to="/" className="item text-primary">SportsMentor</Link>
+            {isAuthenticated ? <Link to="/studyup" className="item text-primary">Study Up</Link> : ""}
             <div className="right menu">
                 {showLinks()}
             </div>
