@@ -15,7 +15,7 @@ const VideoDetail = ({ video }) => {
   
   return (
     <div>
-      <div className="ui embed">
+      <div className="ui embed" id="ytube">
         <iframe src={videoSrc} allowFullScreen title="Video player" />
       </div>
       <div className="ui segment">
