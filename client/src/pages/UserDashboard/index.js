@@ -8,7 +8,7 @@ import Card from "../../components/SportCard"
 export const UserDashboard = () => {
 
     const [sportscard, setSportscard] = useState([])
-
+    
     // useEffect(() => {
     //     loadSportscard()
     // }, [])
@@ -25,6 +25,7 @@ export const UserDashboard = () => {
     // access to the currentUser property from the auth reducer state
     const user = useSelector(state => state.auth.currentUser);
     console.log("user", user._id)
+    console.log(user)
     useEffect(() => {
         const url = "/api/dashboard/cards/" + user._id
         console.log("url", url)
@@ -56,9 +57,10 @@ export const UserDashboard = () => {
                                 key={SCItem._id}
                                 id={SCItem._id}
                                 isStudyUp = {false}
-                                sportsname={SCItem.sportsname}
-                                spImgUrl={SCItem.spImgUrl}
-                                sportspage={SCItem.sportspage}
+                                sportsname={SCItem.cardId.sportsname}
+                                spImgUrl={SCItem.cardId.spImgUrl}
+                                sportspage={SCItem.cardId.sportspage}
+                                spstatus={SCItem.status}
                                 />
                                  </div>
                         )})}

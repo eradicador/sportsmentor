@@ -5,22 +5,22 @@ const { findById } = require("../models/user");
 
 // Defining methods for the merchController
 module.exports = {
-  findAll: function(req, res) {
+  findAll: function (req, res) {
     Sportscard
       .find()
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-      
+
   },
-  create: function(req, res) {
+  create: function (req, res) {
     // get request parameters (ids)
     let cardId = req.params.cardId;
-    let email =req.params.email;
+    let email = req.params.email;
     console.log(cardId, email)
 
-// updating the user's card array with the card's id
+    // updating the user's card array with the card's id
     User
-      .findOneAndUpdate({email: email}, {$push:{cards: cardId}},{new: true})
+      .findOneAndUpdate({ email: email }, { $addToSet: { cards: { cardId: cardId } } }, { new: true })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err))
 
@@ -32,13 +32,17 @@ module.exports = {
     console.log(req.body);
 
     User
-    .findById(req.params.id)
-    .populate("cards")
-    .then (dbModel => res.json(dbModel))
+      .findById(req.params.id)
+      .populate("cards.cardId")
+  
+      .then(dbModel => {
+        console.log("---->", dbModel)
+        res.json(dbModel)
+  })
     .catch(err => res.status(422).json(err))
-  }
-  
-  
+}
+
+
 
 // update theuser with new card when cick save
 
