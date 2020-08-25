@@ -20,11 +20,18 @@ const UserSchema = new Schema({
     },
     cards: [
         {
+        cardId:{
           // Store ObjectIds in the array
           type: Schema.Types.ObjectId,
           // The ObjectIds will refer to the ids in the Note model
           ref: "Sportscard"
+        },
+        status: {
+            type:Boolean,
+            default: false
+
         }
+    }
       ]
       
 });
