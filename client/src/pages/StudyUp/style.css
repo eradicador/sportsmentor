@@ -29,7 +29,6 @@ Card:hover {
 }
 
 .body{
-    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -69,6 +68,7 @@ h1{
   right: 0;
   top: 0;
   z-index: +2;
-  color: white;
+  color: blue;
   background-color: black;
+  font-family: 'Balsamiq Sans', cursive;
 }

@@ -1,72 +1,86 @@
-
-# Boiler Plate - MERN Application with Authentication using JSON Web Tokens (JWT)  
-
-## Online Example & Deployment:
-
-This application was deployed to Heroku services.
--  Link: https://project3-plate.herokuapp.com/
+# SportsMentor
 
 ## Description
-
-This is a Boiler Plate MERN application with authentication using JSON Web Tokens. This APP was design to be used as a starting point for any developer looking to integrate authentication with a MERN application.
-
-This application uses JWT to handle Authentication and Redux to handle React state.
-
-## Web Tools:
-
-Full MERN stack: React, Node.js, Express, MongoDB, Javascript (ES6), Redux, JSON Web Tokens, Rest API, Semantic UI.
-
-## Table of Contents 
-
-* [Installation](#installation)
-
-* [Usage](#usage)
+As developers we created a MERN application, the application will allow users to watch and learn how to play different sports. Users will be able to register an account with their email and password. Then they will be taken to the StudyUp page where they will see cards for different sports, when they click on one of them they will be taken to the tutorial page for that specific sport where they can read about the tecniques for that sport as well as to watch videos for those tecniques so they can practice them. Each card has a save button which when they hit it will save that card in the user's dashboard. In the users dashboard they will be able to see the cards they saved from the studyUp page and when they finish with that specific sport they can hit the complete button which will change the card to green color, meaning that they are done with that sport. The application's UI is divided into components, manage component state, and respond to user events.  
 
 
+## Available Scripts
 
-## Installation
+In the project directory, you can run:
 
-To install necessary dependencies, run the following command:
+### `npm run dev`
 
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
+ 
+## Screenshot 
+<img src ="./client/src/images/screenshot.png" width="500">
+
+## Directory structure
 ```
-npm install
+.
+├── client
+|
+├── config
+│ 
+├── controllers
+│
+├── middleware
+│    
+├── models   
+│    
+├── node_modules   
+│    
+├── routes  
+│    
+├── seeds   
+│    
+├── .env            
+│          
+├── package.json 
+│
+├── README.md 
+│
+└── server.js
 ```
 
-## Usage
-``` 
-    To start using this project: 
+## Links to deployed app
 
-    1.  Install node modules for Fron-End and Back-End with: npm install
-    2.  Create a .env file at the root location of the project to handle the database credentials and JWT secret:
-    
-        # Database Info
-        DATABASE_INFO = "Your Mongo Credentials"
 
-        #JWT Secret
-        JWT_SECRET = "Your JWT Secret"
+https://github.com/eradicador/sportsmentor
 
-    3.  Run the following command to start the application: npm run dev
-    4.  Enjoy..!
-``` 
 
-## Questions
+## Badge
+![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen)
 
-<img src="https://avatars0.githubusercontent.com/u/40499942?v=4" alt="avatar" style="border-radius: 16px" width="30" />
+## License
 
-If you have any questions about the repo, open an issue or contact [jaab30](https://github.com/jaab30) directly at jaab30@yahoo.com.
+MIT License
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jaab30/ticketGen)
+Copyright (c) [2020] [Michael Amaya and Derek D'Esposito]
 
-<!-- ## Video Preview -->
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-<!-- [<img src="https://user-images.githubusercontent.com/40499942/83711110-511fe400-a5f0-11ea-9fc9-e3397e3b0cb9.jpg" alt="app video" width="600px"/>](https://www.youtube.com/watch?v=6_Ur7afd5zE&feature=youtu.be) -->
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-## images
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-<img src="https://user-images.githubusercontent.com/40499942/86778760-bcfacf80-c028-11ea-9c8c-56fa2f0b5cd7.png" alt="app example" width="600px"/>
-<img src="https://user-images.githubusercontent.com/40499942/86778798-c84dfb00-c028-11ea-914b-70ea02530111.png" alt="app example" width="600px"/>
-<img src="https://user-images.githubusercontent.com/40499942/86778829-d4d25380-c028-11ea-90a0-8e1f75e5f3a4.png" alt="app example" width="600px"/>
-<img src="https://user-images.githubusercontent.com/40499942/86778867-df8ce880-c028-11ea-9778-b583e8b9b6bf.png" alt="app example" width="600px"/>
-<img src="https://user-images.githubusercontent.com/40499942/86778904-eb78aa80-c028-11ea-9e92-fed6e7c6af3f.png" alt="app example" width="600px"/>
+## Contributing
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 
 

@@ -1,6 +1,6 @@
 .volleyball{    
-    height: 100vh;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position:  center;
     height: 100%;
@@ -8,14 +8,28 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    color:black;
-    font-size: large;
+    color:white;
     padding: 40px;
-    position: absolute;
     width: 100%;
 }
 
 .container {
     text-align: center;
     justify-content: center;
+}
+
+#para {
+    background-color: black;
+    padding: 15px;
+    border-style: groove;
+    border-radius: 2%;
+    box-shadow: rgba(248, 246, 246, 0.55) 2px 8px 20px 2px;
+    opacity: 70%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+ytube {
+    box-shadow: rgba(0, 0, 0, 0.55) 2px 8px 20px 2px;
 }

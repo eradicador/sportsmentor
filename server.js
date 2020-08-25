@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === "production") {
 };
 
 // connect to Mongo DB 
-mongoose.connect(config.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: true })
+mongoose.connect(config.MONGO_URI || "mongodb://user:rootroot1@ds031835.mlab.com:31835/heroku_7jvrm45w")
     .then(() => console.log(`Mongo DB Succesfully Connected`))
     .catch(err => console.log(err));
 

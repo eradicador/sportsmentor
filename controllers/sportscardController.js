@@ -20,7 +20,7 @@ module.exports = {
 
 // updating the user's card array with the card's id
     User
-      .findOneAndUpdate({email: email}, {$push:{cards: cardId}},{new: true})
+      .findOneAndUpdate({email: email}, {$addToSet:{cards: cardId}},{new: true})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err))
 

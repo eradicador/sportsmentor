@@ -1,21 +1,28 @@
 import React from 'react';
-// import youtubeAPI from '../utils/youtubeAPI';
-// import VidGroup from './VidGroup';
-// import VidDetails from './VidDetails';
+import youtubeAPI from '../../utils/youtubeAPI';
+import VidGroup from '../VidGroup';
+import VidDetails from '../VidDetails';
 // import { Container } from 'semantic-ui-react';
 
-class BBField extends React.Component {
-    // state = {
-    //     videos: [youtubeAPI.get('/search/learning-to-field-a-baseball')],
-    //     selectedVideo: null
-    // }
+class FBCatch extends React.Component {
+    state = {
+        videos: [],
+        selectedVideo: null
+    }
+
+    componentDidMount() {
+        youtubeAPI.searchVideo("how to catch a football").then(result => {
+            console.log(result);
+            this.setState({ videos: result.data.items, selectedVideo: result.data.items[0] })
+        }).catch(error => console.log(error))
+    }
 
 
     render() {
         return (
             <>
                 <div className="container font-weight-bold">
-                    <div className="row">
+                    <div className="row"id="para">
                         <div className="col-12">
                             <h1>Catching Coach</h1>
                             <p>
@@ -32,19 +39,14 @@ class BBField extends React.Component {
                         </div>
                     </div>
                 </div>
-                {/* <div className='ui container' style={{ marginTop: '1em' }}>
-
-                    <div className='ui grid'>
-                        <div className="ui row">
-                            <div className="eleven wide column">
-                                <VidDetails video={this.state.selectedVideo} />
-                            </div>
-                            <div className="five wide column">
-                                <VidGroup videos={this.state.videos} />
-                            </div>
-                        </div>
+                <div className="row">
+                    <div className="col-md-8">
+                        <VidDetails video={this.state.selectedVideo} />
                     </div>
-                </div> */}
+                    <div className="col-md-4">
+                        <VidGroup videos={this.state.videos} />
+                    </div>
+                </div>
 
             </>
         )
@@ -52,4 +54,4 @@ class BBField extends React.Component {
     }
 }
 
-export default BBField;
+export default FBCatch;

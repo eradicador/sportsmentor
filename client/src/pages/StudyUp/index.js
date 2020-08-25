@@ -2,14 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Toast } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import API from "../../utils/API";
-import { Header, Message } from "semantic-ui-react";
 import Card from "../../components/SportCard"
 import "./style.css"
-import background from "./background.jpg"
+import background from "../../images/studyUpbg.jpg"
 
 export const StudyUp = () => {
 
-    const { currentUser, isAuthenticated } = useSelector(state => state.auth)
+    const { currentUser } = useSelector(state => state.auth)
     // setting the components initial state
     const [sportscard, setSportscard] = useState([])
     const [showToast, setShowToast] = useState(false)
@@ -67,7 +66,7 @@ export const StudyUp = () => {
                                         className="rounded mr-2"
                                         alt=""
                                     />
-                                    <strong className="mr-auto">Saved!</strong>
+                                    <strong className="mr-auto text-primary">Saved!</strong>
                                 </Toast.Header>
                                 <Toast.Body>View your saved sports in the dashboard.</Toast.Body>
                             </Toast>

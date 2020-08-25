@@ -2,37 +2,29 @@ import React from 'react';
 import youtubeAPI from '../../utils/youtubeAPI';
 import VidGroup from '../VidGroup';
 import VidDetails from '../VidDetails';
-// import { Container } from 'semantic-ui-react';
 
-class HKShoot extends React.Component {
+
+class VBBump extends React.Component {
     state = {
         videos: [],
         selectedVideo: null
     }
 
     componentDidMount() {
-        youtubeAPI.searchVideo("how to shoot a hockey puck").then(result => {
+        youtubeAPI.searchVideo("how to bump a volleyball").then(result => {
             console.log(result);
             this.setState({ videos: result.data.items, selectedVideo: result.data.items[0] })
         }).catch(error => console.log(error))
     }
-
     render() {
         return (
             <>
                 <div className="container font-weight-bold">
                     <div className="row" id="para">
                         <div className="col-12">
-                            <h1>Shooting Coach</h1>
+                            <h1>Bumping Coach</h1>
                             <p>
-                            The Slap Shot
-                            The slap shot is the bread and butter of shooting. It's the hardest and quickest of the shots. The puck can reach incredible speeds of 100 mph.
-                            A slap shot has four phases:
-                            1. The player winds his stick, moving it backwards until it is parallel with the ground.
-                            2. Next, the shooter swings the club down and forward. The end of the stick contacts the ice where the puck is. The player now shift his weight to the stick as it moves past the puck. The stick end will bend backwards as it makes contact with the puck.
-                            3. The shooter then leads the stick forward while rotating the hips.
-                            4. Focus on the target and use the stick to guide the puck where you want it to go.
-                        
+                                You’ll want to start with your knees bent, weight on your toes, and leaning forward slightly. Next, you’ll need to get your platform ready. Lock your elbows so your arms are perfectly straight. The way you hold your hands together, in the grand scheme of things, doesn’t affect much, but I personally prefer making a fist with one hand, and wrapping the other hand around it. DO NOT CROSS YOUR THUMBS! At the wrong angle, with enough power, you can break your thumbs if they’re crossed.
                         </p>
                         </div>
                     </div>
@@ -52,4 +44,4 @@ class HKShoot extends React.Component {
     }
 }
 
-export default HKShoot;
+export default VBBump;
