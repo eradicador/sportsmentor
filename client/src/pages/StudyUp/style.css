@@ -69,6 +69,8 @@ h1{
   right: 0;
   top: 0;
   z-index: +2;
-  color: white;
+  color: black;
   background-color: black;
+  border-style: groove;
+  border-color: cornflowerblue;
 }
