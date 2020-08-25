@@ -1,14 +1,22 @@
 import React from 'react';
-// import youtubeAPI from '../utils/youtubeAPI';
-// import VidGroup from './VidGroup';
-// import VidDetails from './VidDetails';
+import youtubeAPI from '../utils/youtubeAPI';
+import VidGroup from '../VidGroup';
+import VidDetails from '../VidDetails';
 // import { Container } from 'semantic-ui-react';
 
-class BBField extends React.Component {
-    // state = {
-    //     videos: [youtubeAPI.get('/search/learning-to-field-a-baseball')],
-    //     selectedVideo: null
-    // }
+class SCDribble extends React.Component {
+    state = {
+        videos: [],
+        selectedVideo: null
+    }
+
+    componentDidMount() {
+        youtubeAPI.searchVideo("how to dribble a soccerball").then(result => {
+            console.log(result);
+            this.setState({ videos: result.data.items, selectedVideo: result.data.items[0] })
+        }).catch(error => console.log(error))
+    }
+
 
 
     render() {
@@ -19,30 +27,23 @@ class BBField extends React.Component {
                         <div className="col-12">
                             <h1>Dribbling Coach</h1>
                             <p>
-                            In soccer, dribbling is the skill of moving the ball around the field by use of the feet, unassisted by other players. It has been said that the great dribblers are “born and not made,” and that dribbling is “an art and not a science,” but dribbling can and must be taught, up to and including the most advanced moves.
-                            The basic concepts of dribbling include keeping the ball as close to the feet as possible in order to maintain control of the ball, using the correct part of the feet to contact the ball in order to maintain balance of the body, and trying to maximize the use of the lower part of peripheral vision to see the ball in order to keep as much of the field in sight as possible during performance of the skill.
+                                The key to dribbling is to use both feet to kick the ball ever so lightly without losing control at a comfortable speed for you. You should touch the ball with the inside of your shoes, for the most part, for better control. But you can touch it with the outside of your shoe as well. The very best players in the world can dribble the ball adeptly with both feet. Most people usually favor one of their feet as the superior skilled foot to dribble the ball in close quarters, although both feet also are used.
                         </p>
                         </div>
                     </div>
                 </div>
-                {/* <div className='ui container' style={{ marginTop: '1em' }}>
-
-                    <div className='ui grid'>
-                        <div className="ui row">
-                            <div className="eleven wide column">
-                                <VidDetails video={this.state.selectedVideo} />
-                            </div>
-                            <div className="five wide column">
-                                <VidGroup videos={this.state.videos} />
-                            </div>
-                        </div>
+                <div className="row">
+                    <div className="col-md-8">
+                        <VidDetails video={this.state.selectedVideo} />
                     </div>
-                </div> */}
-
+                    <div className="col-md-4">
+                        <VidGroup videos={this.state.videos} />
+                    </div>
+                </div>
             </>
         )
 
     }
 }
 
-export default BBField;
+export default SCDribble;

@@ -3,6 +3,7 @@ import youtubeAPI from '../../utils/youtubeAPI';
 import VidGroup from '../VidGroup';
 import VidDetails from '../VidDetails';
 import { Container, SearchResults } from 'semantic-ui-react';
+import fastball from "../../images/fastball.jpg"
 
 class BBPitch extends React.Component {
     state = {
@@ -26,6 +27,7 @@ class BBPitch extends React.Component {
                         <div className="col-12">
                             <h1>Pitching Coach</h1>
                         </div>
+                        <img img src={fastball} alt="Logo" />
                     </div>
                     <div className="row" id="para">
                         <div className="col-12">
