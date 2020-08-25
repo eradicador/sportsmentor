@@ -20,13 +20,10 @@ class BBField extends React.Component {
         return (
             <>
                 <div className="container font-weight-bold">
-                    <div className="row">
-                        <div className="col-12">
-                            <h1>Fielding Coach</h1>
-                        </div>
-                    </div>
+                    
                     <div className="row" id="para">
                         <div className="col-12">
+                        <h1>Fielding Coach</h1>
                             <p>
                                 Early baseball was a game played without gloves. During the slow transition to gloves, a player who continued to play without one was called a barehanded catcher; this did not refer to the position of catcher, but rather to the practice of catching with bare hands. The earliest glove was not webbed and not particularly well suited for catching but was used more to swat a ball to the ground so that it could be picked up.
                             <br />

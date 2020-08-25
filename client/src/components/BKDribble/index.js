@@ -1,5 +1,5 @@
 import React from 'react';
-import youtubeAPI from '../utils/youtubeAPI';
+import youtubeAPI from '../../utils/youtubeAPI';
 import VidGroup from '../VidGroup';
 import VidDetails from '../VidDetails';
 // import { Container } from 'semantic-ui-react';
@@ -23,9 +23,11 @@ class BKDribble extends React.Component {
         return (
             <>
                 <div className="container font-weight-bold">
-                    <div className="row">
+                    
+                    <div className="row" id="para">
                         <div className="col-12">
-                            <h1>Dribbling Coach</h1>
+                        <h1>Dribbling Coach</h1>
+
                             <p>
                                 Dribble the ball hard. The more time the ball spends in your hand, the more control you have of the ball. The harder you dribble, the quicker it gets back in your hand.
                                 Head up at all times. Look at the rim or a spot on the wall during all practice.
@@ -42,7 +44,7 @@ class BKDribble extends React.Component {
                         <VidGroup videos={this.state.videos} />
                     </div>
                 </div>
-            
+
 
             </>
         )

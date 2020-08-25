@@ -1,9 +1,9 @@
 import React from 'react';
-import youtubeAPI from '../utils/youtubeAPI';
+import youtubeAPI from '../../utils/youtubeAPI';
 import VidGroup from '../VidGroup';
 import VidDetails from '../VidDetails';
 // import { Container } from 'semantic-ui-react';
-import fbcatch from "../../images/fbcatch.jpg"
+
 
 class FBCatch extends React.Component {
     state = {
@@ -23,7 +23,7 @@ class FBCatch extends React.Component {
         return (
             <>
                 <div className="container font-weight-bold">
-                    <div className="row">
+                    <div className="row" id="para">
                         <div className="col-12">
                             <h1>Receiving Coach</h1>
                             <p>
@@ -36,7 +36,7 @@ class FBCatch extends React.Component {
                                 practice is to say waist high or above, the preferred method is to fine-tune the
                                 delineation point by using the bottom of the numbers, as the location that determines
                                 which hand position to use.
-                                <img src={fbcatch} alt="footbal catch technique" />;
+                                
                         </p>
                         </div>
                     </div>
