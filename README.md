@@ -1,20 +1,14 @@
 
-# Boiler Plate - MERN Application with Authentication using JSON Web Tokens (JWT)  
-
-## Online Example & Deployment:
-
-This application was deployed to Heroku services.
--  Link: https://project3-plate.herokuapp.com/
+# SportsMentor
 
 ## Description
 
-This is a Boiler Plate MERN application with authentication using JSON Web Tokens. This APP was design to be used as a starting point for any developer looking to integrate authentication with a MERN application.
+Welcome to SportsMentor. This luxurious MERN application was built on the idea that everyone should be able to have quick and easy access to learning new skills with sports. Sportmentor, breaks down major U.S sports by key skill components that will help any beginner become more familiar with how to play and succeed in all facets of multiple sports
 
-This application uses JWT to handle Authentication and Redux to handle React state.
 
 ## Web Tools:
 
-Full MERN stack: React, Node.js, Express, MongoDB, Javascript (ES6), Redux, JSON Web Tokens, Rest API, Semantic UI.
+Full MERN stack: React, Node.js, Express, MongoDB, Javascript (ES6), Redux, JSON Web Tokens, Rest API, Semantic UI, Youtube API
 
 ## Table of Contents 
 
@@ -51,12 +45,12 @@ npm install
 
 ## Questions
 
-<img src="https://avatars0.githubusercontent.com/u/40499942?v=4" alt="avatar" style="border-radius: 16px" width="30" />
 
-If you have any questions about the repo, open an issue or contact [jaab30](https://github.com/jaab30) directly at jaab30@yahoo.com.
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jaab30/ticketGen)
+If you have any questions about our repo, open an issue or contact [eradicador](https://github.com/eradicador) or [derekdespo](https://github.com/derekdespo) directly at janisepinto@yahoo.com || derekdespi@icloud.com.
 
+## Contributing
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
 <!-- ## Video Preview -->
 
 <!-- [<img src="https://user-images.githubusercontent.com/40499942/83711110-511fe400-a5f0-11ea-9fc9-e3397e3b0cb9.jpg" alt="app video" width="600px"/>](https://www.youtube.com/watch?v=6_Ur7afd5zE&feature=youtu.be) -->

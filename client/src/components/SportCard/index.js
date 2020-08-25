@@ -33,9 +33,9 @@ function Card(props) {
               className="rounded mr-2"
               alt=""
             />
-            <strong className="mr-auto">Saved!</strong>
+            <strong className="mr-auto">Congratulations!</strong>
           </Toast.Header>
-          <Toast.Body>You have completed it your tutorial.</Toast.Body>
+          <Toast.Body>You have completed your tutorial.</Toast.Body>
         </Toast>
       </div>
       <div className={classComplete}>
